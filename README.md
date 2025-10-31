@@ -1,3 +1,3 @@
-# LoopLab Studio: Fusion PAC Essentials Support
+# LoopLab Studio: DaVinci Resolve Fusion Support
 
-Support for LoopLab Studio PAC Essentials for DaVinci Resolve Fusion.
+Centralized support for all LoopLab Studio Fusion products.
