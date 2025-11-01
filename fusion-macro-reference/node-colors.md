@@ -13,14 +13,9 @@ A list of Fusion node colors used in `.setting` files.
 			Inputs = {},
 			ViewInfo = OperatorInfo {},
 
-			Colors = { 
-        TileColor = { 
-          R = 0.92156862745098, 
-          G = 0.431372549019608, 
-          B = 0 
-        }, 
-      },
-
+			-- Orange
+			Colors = { TileColor = { R = 0.92156862745098, G = 0.431372549019608, B = 0 }, },
+			
 			UserControls = ordered() {}
 		},
 		Tool_NameLUTIn1 = LUTBezier {},
