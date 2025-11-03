@@ -31,3 +31,6 @@ To help expedite bug reports, please include:
 - The name of the tool (available as a label)
 - Steps to reproduce the issue
 - Screenshots or composted video demonstrating the issue
+
+----------------------------------------------------------
+

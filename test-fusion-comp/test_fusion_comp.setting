@@ -1,0 +1,169 @@
+{
+	Tools = ordered() {
+		MediaOut1 = MediaOut {
+			NameSet = true,
+			Inputs = {
+				Index = Input { Value = "0", },
+				Input = Input {
+					SourceOp = "Merge3",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 825, 214.5 } },
+		},
+		Merge3 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Key",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Test_Opacity",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 660, 214.5 } },
+		},
+		Test_Opacity = Merge {
+			NameSet = true,
+			Inputs = {
+				Background = Input {
+					SourceOp = "Alpha",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Test_Anim",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 660, 115.5 } },
+		},
+		Test_Anim = Transform {
+			NameSet = true,
+			Inputs = {
+				UseSizeAndAspect = Input { Value = 0, },
+				Input = Input {
+					SourceOp = "Set_Object",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 660, 82.5 } },
+		},
+		Key = Background {
+			NameSet = true,
+			Inputs = {
+				GlobalOut = Input { Value = 299, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				TopLeftRed = Input { Value = 0.0235294117647059, },
+				TopLeftGreen = Input { Value = 0.0352941176470588, },
+				TopLeftBlue = Input { Value = 0.129411764705882, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 495, 214.5 } },
+		},
+		Alpha = Background {
+			NameSet = true,
+			Inputs = {
+				GlobalOut = Input { Value = 299, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				TopLeftAlpha = Input { Value = 0, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 495, 115.5 } },
+		},
+		Test_Animation = Underlay {
+			NameSet = true,
+			ViewInfo = UnderlayInfo {
+				Pos = { 660, 49.5 },
+				Size = { 172, 118.313 }
+			},
+			Colors = { TileColor = { R = 0.623529411764706, G = 0.776470588235294, B = 0.0823529411764706 }, }
+		},
+		Set_Object = Transform {
+			NameSet = true,
+			Inputs = {
+				Size = Input { Value = 0.5, },
+				Angle = Input { Value = -90, },
+				Input = Input {
+					SourceOp = "Render_Circle",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 660, 16.5 } },
+		},
+		Render_Circle = sRender {
+			NameSet = true,
+			Inputs = {
+				GlobalOut = Input { Value = 299, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				Input = Input {
+					SourceOp = "sMerge1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 660, -16.5 } },
+			Colors = { TileColor = { R = 0.92156862745098, G = 0.431372549019608, B = 0 }, }
+		},
+		Circle = sEllipse {
+			NameSet = true,
+			Inputs = {
+				Width = Input { Value = 0.5625, },
+				Height = Input { Value = 0.5625, },
+				Green = Input { Value = 0.333333333333333, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 825, -49.5 } },
+		},
+		sMerge1 = sMerge {
+			Inputs = {
+				Input1 = Input {
+					SourceOp = "Circle",
+					Source = "Output",
+				},
+				Input2 = Input {
+					SourceOp = "Tail_Marker",
+					Source = "Output",
+				},
+				Input3 = Input {
+					SourceOp = "Head_Marker",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 660, -49.5 } },
+		},
+		Head_Marker = sEllipse {
+			NameSet = true,
+			Inputs = {
+				["Translate.X"] = Input { Value = 0.2, },
+				Width = Input { Value = 0.05, },
+				Height = Input { Value = 0.05, },
+				Red = Input { Value = 0.666666666666667, },
+				Green = Input { Value = 0, },
+				Blue = Input { Value = 0, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 825, -82.5 } },
+		},
+		Tail_Marker = sEllipse {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = {
+				["Translate.X"] = Input { Value = -0.2, },
+				Width = Input { Value = 0.1, },
+				Height = Input { Value = 0.025, },
+				Red = Input { Value = 0.666666666666667, },
+				Green = Input { Value = 0, },
+				Blue = Input { Value = 0, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 825, -115.5 } },
+		}
+	},
+	ActiveTool = "Tail_Marker"
+}
