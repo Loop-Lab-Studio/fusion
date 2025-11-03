@@ -2,8 +2,8 @@
 
 A key to great motion graphics is using higher frame rates and project dimensions. This topic covers DaVinci Resolve Project Settings for YouTube. 
 
-- [YouTube_60FPS_UltraHD.preset]()
-- [YouTube_60FPS_HD.preset]()
+- [YouTube_60FPS_UltraHD.preset](https://github.com/looplabstudio/fusion/blob/main/youtube-presets/YouTube_60FPS_UltraHD.preset)
+- [YouTube_60FPS_HD.preset](https://github.com/looplabstudio/fusion/blob/main/youtube-presets/YouTube_60FPS_HD.preset)
 
 ## References
 
