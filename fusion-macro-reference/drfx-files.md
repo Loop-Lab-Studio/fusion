@@ -11,7 +11,7 @@ How to install DRFX files in DaVinci Resolve Fusion.
 
 Typically, when you download effects, the download is a `.zip` containing a `.drfx` file, README, and LICENSE. Unzip this file to a convenient location. Navigate to this location in your file explorer.
 
-1. Open a project in Resolve and switch to the Fusion page. 
+1. Launch DaVinci Resolve.
 1. In your file explorer, double-click the `.drfx` file.
 1. DaVinci displays a confirmation prompt. Click `Install`.
 1. Restart Resolve. Effects are ready to use.
