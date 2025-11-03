@@ -4,10 +4,10 @@ Centralized support for all LoopLab Studio Fusion products.
 
 ## Product Documentation
 
-- [PAC Essentials](https://github.com/Loop-Lab-Studio/fusion-pac-essentials)
-- [PAC Oscillate](https://github.com/Loop-Lab-Studio/fusion-pac-oscillate)
-- [PAC Orbit](https://github.com/Loop-Lab-Studio/fusion-pac-orbit)
-- [ACM Essentials](https://github.com/Loop-Lab-Studio/fusion-acm-essentials)
+- [PAC Essentials](./LL_PAC_Essentials/README.md)
+- [PAC Oscillate](./LL_PAC_Oscillate/README.md)
+- [PAC Orbit](./LL_PAC_Orbit/README.md)
+- [ACM Essentials](./LL_ACM_Essentials/README.md)
 
 ## How to Install DRFX Files
 
