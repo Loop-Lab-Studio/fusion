@@ -16,6 +16,8 @@ Typically, when you download effects, the download is a `.zip` containing a `.dr
 1. DaVinci displays a confirmation prompt. Click `Install`.
 1. Restart Resolve. Effects are ready to use.
 
+LoopLab Studio tools are typically available on the Fusion page, in the Effects panel, under `Templates > Fusion > Effects > LoopLab Studio`.
+
 
 ## DRFX Directory Structure
 
